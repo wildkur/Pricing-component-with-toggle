@@ -1,0 +1,22 @@
+:root {
+    --linear-gradient: linear-gradient(
+      to right,
+      hsl(236, 72%, 79%),
+      hsl(237, 63%, 64%)
+    );
+  }
+
+body{
+  background-color: hsl(240, 78%, 98%);
+  background-image: url("/images/bg-top.svg");
+}
+  
+
+#gradient{
+  background: var(--linear-gradient);
+ 
+}
+
+.custom-gradient li {
+  background: inherit;
+}
