@@ -3,6 +3,10 @@ const priceOne = document.querySelector('#price-one');
 const priceTwo = document.querySelector('#price-two');
 const priceThree = document.querySelector('#price-three');
 
+let boton = document.querySelector("button");
+boton.setAttribute("pulsado", false);
+console.log(boton.getAttribute("pulsado"));
+
 function changePrices() {
     if(toggle.checked == true) {
         priceOne.innerHTML = '10'
@@ -17,3 +21,8 @@ function changePrices() {
 }
 
 toggle.addEventListener('click', changePrices)
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("cargo inicialmente los precios");
+    prices();
+  });

@@ -2,9 +2,7 @@ const toggle = document.getElementById("toggle");
 const priceOne = document.getElementById("price-one");
 const priceTwo = document.getElementById("price-two");
 const priceThree = document.getElementById("price-three");
-let boton = document.querySelector("button");
-boton.setAttribute("pulsado", false);
-console.log(boton.getAttribute("pulsado"));
+
 function prices() {
   if (toggle.checked) {
     priceOne.innerHTML = "19.99";
