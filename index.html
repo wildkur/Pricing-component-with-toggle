@@ -1,98 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!--Bootstrap link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
 
-  <!--Bootstrap link-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- google font link-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- google font link-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="css/custom.css" />
 
-  <!-- CSS link -->
-  <link rel="stylesheet" href="css/custom.css">
+    <!-- Title -->
+    <title>Frontend Mentor | [Pricing component]</title>
+  </head>
 
-  <!-- Title -->
-  <title>Frontend Mentor | [Pricing component]</title>
-
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-    .secondary-text-color {
-      color:white;
-    }
-    .font-family {
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
-</head>
-
-<body class="font-family attribution">
-  
-  <div class="container d-flex align-items-center justify-content-center flex-column" style="height:120px">
-    <h2 class="fs-1">Our Pricing</h2>
-      
-      <div class="fs-6 form-check form-switch">
-        <span>Annually</span>
-         <label><input class="form-check-input" type="checkbox" id="flexSwitchCheck"></label>
-        <span>Monthly</span>
+  <body>
+    <div
+      class="d-flex flex-column justify-content-md-center"
+      style="height: 100vh"
+    >
+      <!--HEADER SECTION-->
+      <div
+        class="container d-flex flex-column align-items-center pt-5"
+        style="height: 130px"
+      >
+        <h2 class="fs-1">Our Pricing</h2>
+        <div
+          class="fs-6 form-check form-switch p-0 mt-2 d-flex justify-content-evenly"
+          style="width: 250px"
+        >
+          <span>Annually</span>
+          <label class="pt-1">
+            <input
+              class="form-check-input m-0 p-2"
+              type="checkbox"
+              id="toggle"
+            />
+          </label>
+          <span>Monthly</span>
+        </div>
       </div>
-  </div>
 
-  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-center" >
+      <!-- CARDS SECTION-->
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-center mt-3"
+      >
+        <div
+          class="basic-pricing card shadow bg-white p-4 mt-3 mb-2 rounded-3"
+          style="width: 18rem"
+        >
+          <p class="fs-5">Basic</p>
+          <h1 class="fs-1 fw-bold mb-4">
+            <small>&dollar;</small><span id="price-one"></span>
+          </h1>
+          <ul class="list-group list-group-flush fs-6">
+            <li class="list-group-item">500 GB Storage</li>
+            <li class="list-group-item">2 Users Allowed</li>
+            <li class="list-group-item">Send up to 3 GB</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-light btn-sm mt-4 p-2 border border-white secondary-text-color gradient-color"
+          >
+            LEARN MORE
+          </button>
+        </div>
 
-    <div class="basic-pricing card shadow bg-white p-4 mt-3 mb-2 rounded-3" style="width: 18rem">
-      <p class="fs-5">Basic</p>
-      <h1 class="fs-1 fw-bold mb-4">&dollar;<span id="price-one"></span></h1>
-      <ul class="list-group list-group-flush fs-6">
-        <li class="list-group-item">500 GB Storage</li>
-        <li class="list-group-item">2 Users Allowed</li>
-        <li class="list-group-item"> Send up to 3 GB</li>
-      </ul>
-      <button type="button" id="gradient" class="btn btn-primary btn-sm mt-4 p-2 border border-white secondary-text-color">LEARN MORE</button>
+        <div
+          class="professional-pricing card bg-white p-4 mt-3 mb-2 border border-white secondary-text-color rounded-3 gradient-color"
+          style="width: 18rem"
+        >
+          <p class="fs-5">Professional</p>
+          <h1 class="fs-1 fw-bold mb-4">
+            <small>&dollar;</small><span id="price-two"></span>
+          </h1>
+          <ul class="list-group list-group-flush fs-6 custom-gradient">
+            <li class="list-group-item">1 TB Storage</li>
+            <li class="list-group-item">5 Users Allowed</li>
+            <li class="list-group-item">Send up to 10 GB</li>
+          </ul>
+          <button type="button" class="btn btn-light btn-sm mt-4 p-2">
+            LEARN MORE
+          </button>
+        </div>
+
+        <div
+          class="master-pricing card bg-white p-4 mt-3 mb-2 rounded-3"
+          style="width: 18rem"
+        >
+          <p class="fs-5">Master</p>
+          <h1 class="fs-1 fw-bold mb-4">
+            <small>&dollar;</small><span id="price-three"></span>
+          </h1>
+          <ul class="list-group list-group-flush fs-6">
+            <li class="list-group-item">2 TB Storage</li>
+            <li class="list-group-item">10 Users Allowed</li>
+            <li class="list-group-item">Send up to 20 GB</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-light btn-sm mt-4 p-2 border border-white secondary-text-color gradient-color"
+          >
+            LEARN MORE
+          </button>
+        </div>
+      </div>
+
+      <div class="attribution mt-3 mb-2">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Maria Canals & Oscar Farré</a>.
+      </div>
     </div>
-
-    <div class="professional-pricing card bg-white p-4 mt-3 mb-2 border border-white secondary-text-color rounded-3" id="gradient" style="width: 18rem">
-      <p class="fs-5">Professional</p>
-      <h1 class="fs-1 fw-bold mb-4">&dollar;<span id="price-two"></span></h1>
-      <ul class="list-group list-group-flush fs-6 custom-gradient">
-        <li class="list-group-item">1 TB Storage</li>
-        <li class="list-group-item">5 Users Allowed</li>
-        <li class="list-group-item">Send up to 10 GB</li>
-      </ul>
-      <button type="button" class="btn btn-light btn-sm mt-4 p-2">LEARN MORE</button>
-    </div>
-
-    <div class="master-pricing card bg-white p-4 mt-3 mb-2 rounded-3" style="width: 18rem">
-      <p class="fs-5">Master</p>
-      <h1 class="fs-1 fw-bold mb-4">&dollar;<span id="price-three"></span></h1>
-      <ul class="list-group list-group-flush fs-6">
-        <li class="list-group-item">2 TB Storage</li>
-        <li class="list-group-item">10 Users Allowed</li>
-        <li class="list-group-item">Send up to 20 GB</li>
-      </ul>
-      <button type="button" id="gradient" class="btn btn-sm mt-4 p-2 border border-white secondary-text-color">LEARN MORE</button>
-    </div>
-  </div>
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Maria Canals & Oscar Farré</a>.
-  </div> -->
-<script src="/main.js"></script>
-</body>
-
+    <script src="/main.js"></script>
+  </body>
 </html>

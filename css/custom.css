@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
     --linear-gradient: linear-gradient(
       to right,
@@ -9,14 +13,31 @@
 body{
   background-color: hsl(240, 78%, 98%);
   background-image: url("/images/bg-top.svg");
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-  
-
-#gradient{
+#toggle{
+  background-color: hsl(228, 45%, 44%);
+}
+.gradient-color{
   background: var(--linear-gradient);
  
 }
 
 .custom-gradient li {
   background: inherit;
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.secondary-text-color {
+  color: white;
 }
